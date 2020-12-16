@@ -5,13 +5,18 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 
 @Entity
 @Table(name="StudentsTable")
+@ApiModel(description="Student Details")
 public class Student {
 	
 	@Id
 	@GeneratedValue
+	@ApiModelProperty(notes="Unique Id of the Student")
 	private int studentId;
 	private String studentName;
 	private String studentDetails;
